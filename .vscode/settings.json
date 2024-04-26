@@ -1,0 +1,27 @@
+{
+    "cSpell.words": [
+        "Card",
+        "ezek",
+        "getting",
+        "insecure",
+        "like",
+        "pages",
+        "preact",
+        "production",
+        "Quick",
+        "rounded",
+        "spam",
+        "sure",
+        "tailwind",
+        "tailwindcss",
+        "theme",
+        "toast",
+        "turned",
+        "unsuitable",
+        "your",
+        "zinc"
+    ],
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
+}
