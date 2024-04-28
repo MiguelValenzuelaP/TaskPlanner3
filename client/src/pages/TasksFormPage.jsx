@@ -41,10 +41,11 @@ export function TasksFormPage() {
         async function loadTask() {
             if (params.id) {
                 // console.log("getting data")
-                const { data: { title, description } } = await getTask(params.id)
+                const { data: { title, description, other } } = await getTask(params.id)
                 // console.log({ title, description })
                 setValue('title', title)
                 setValue('description', description)
+                setValue('other', other)
             }
         }
         loadTask();
@@ -66,6 +67,13 @@ export function TasksFormPage() {
                     {...register("description", { required: true })} className="bg-zinc-700 p-3 rounded-lg block w-full mb3"
                 ></textarea>
                 {errors.description && <spam>description is required </spam>}
+                <textarea
+                    rows="1"
+                    placeholder="Other"
+                    {...register("other", { required: true })}
+                    className="bg-zinc-700 p-3 rounded-lg block w-full mb3"
+                ></textarea>
+                {errors.other && <spam>other is required</spam>}
                 <button className="bg-indigo-500 p-3 rounded-lg w-full mt-3">Save</button>
             </form>
             {
